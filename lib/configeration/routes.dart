@@ -1,6 +1,8 @@
- import 'package:flutter/cupertino.dart';
+ import 'package:acility_management_application/features/login/presentation/pages/login_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../features/login/presentation/pages/forget_password_screen.dart';
 import '../features/signUp/presentation/pages/signUpScreen.dart';
 
 
@@ -36,8 +38,15 @@ class Routes {
           builder: (context) =>   SignUpScreen(),
         );
 
+      case AppRoutes.forgetPassword:
+        return MaterialPageRoute(
+          builder: (context) =>   ForgetPasswordScreen(),
+        );
 
-
+      case AppRoutes.login:
+        return MaterialPageRoute(
+          builder: (context) =>   LoginScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) {

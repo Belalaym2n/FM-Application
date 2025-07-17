@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "22258914724",
+    "project_id": "fm-application",
+    "storage_bucket": "fm-application.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22258914724:android:8b052acb57268170079d31",
+        "android_client_info": {
+          "package_name": "com.example.acility_management_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOIGm4gaUg0ku3wnMo7vnoz1upoPgIaRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
