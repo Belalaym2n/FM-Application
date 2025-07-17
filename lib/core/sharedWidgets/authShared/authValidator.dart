@@ -1,4 +1,4 @@
-class SignUpValidator {
+class AuthValidator {
   static bool isValidEmail(String email) {
     final regex = RegExp(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$");
     return regex.hasMatch(email);

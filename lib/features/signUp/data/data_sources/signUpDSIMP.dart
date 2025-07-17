@@ -17,10 +17,12 @@ class SignUpDSImp implements SignUpDS {
         password: owner.password,
       );
       final user = credential.user;
-      await  uploadOwnerOnFirebase(owner);
+
 
       print("success");
       if (user != null) {
+        owner.userID=user.uid.toString();
+        await  uploadOwnerOnFirebase(owner);
         await user.sendEmailVerification();
       }
       return Result.success(credential.user?.email.toString());
@@ -51,7 +53,7 @@ class SignUpDSImp implements SignUpDS {
     final collectionName = AppConfiguration.ownersCollectionName;
     // TODO: implement uploadOwnerOnFirebase
     try {
-      _firestore.collection(collectionName).doc().set(owner.toJson());
+      _firestore.collection(collectionName).doc(owner.userID).set(owner.toJson());
       return Result.success("success");
     } catch (e) {
       print("error ${e.toString()}");

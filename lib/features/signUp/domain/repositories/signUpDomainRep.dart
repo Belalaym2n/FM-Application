@@ -7,4 +7,5 @@ abstract class SignUpDomainRepo{
   Future<Result> createAcc({
     required OwnerModel owner
 });
+
 }
